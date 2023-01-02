@@ -6,44 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="./script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <link href="./header.css" rel="stylesheet">
     <link href="./footer.css" rel="stylesheet">
+    <link href="./cursos.css" rel="stylesheet">
 
     <title>Cursos</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #F6C34A;
-        }
-
-        main {
-            height: 100vh;
-        }
-
-        .grid {
-            display: grid;
-            grid-auto-flow: column;
-            /*  */
-        }
-
-        .container-section-1 {
-            border-radius: 10px;
-            background-color: #FFFFFF;
-            column-gap: 3vw;
-            grid-column-gap: 1fr;
-        }
-
-        .section-1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -70,22 +48,75 @@
             <img id="img-wpp" src="./midias/logos_whatsapp-icon.png">
         </a>
         <section class="section-1">
-            <div class="container-section-1 grid">
-                <div>
+            <div class="container-section-1">
+                <div class="item-section1">
                     <h4>HTML e CSS</h4>
                     <p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt ultricies enim, ac</p>
                 </div>
-                <div>
+                <div class="item-section1">
                     <h4>JavaScript</h4>
                     <p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt ultricies enim, ac</p>
                 </div>
-                <div>
+                <div class="item-section1">
                     <h4>APIs e Rest</h4>
                     <p>Maecenas ullamcorper, metus eu mattis tristique, ante metus ultrices ex, vel auctor tortor dolor nec dui. Nullam vestibulum eleifend ipsum elementum accumsan. Fusce tempus finibus odio a faucibus. Etiam justo ante, viverra ut iaculis vel, vulputate sed massa. Quisque tincidunt ultricies enim, ac</p>
                 </div>
             </div>
+            <a href="#" id="button-cursos">Quero fazer parte!</a>
         </section>
-        <section></section>
+        <section class="container-section-2">
+            <div class="item-section-2">
+                <h4>HTML e CSS</h4>
+                <ul class="list-section-2">
+                    <li class="item-list-section-2 title-modulo">Módulo 1</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                </ul>
+                <ul class="list-section-2">
+                    <li class="item-list-section-2 title-modulo">Módulo 2</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                </ul>
+            </div>
+            <div class="item-section-2">
+                <h4>JavaScript</h4>
+                <ul class="list-section-2">
+                    <li class="item-list-section-2 title-modulo">Módulo 1</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                </ul>
+                <ul class="list-section-2">
+                    <li class="item-list-section-2 title-modulo">Módulo 2</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                </ul>
+            </div>
+            <div class="item-section-2">
+                <h4>APIs e Rest</h4>
+                <ul class="list-section-2">
+                    <li class="item-list-section-2 title-modulo">Módulo 1</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                </ul>
+                <ul class="list-section-2">
+                    <li class="item-list-section-2 title-modulo">Módulo 2</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                    <li class="item-list-section-2">Suspendisse condimentum</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <footer>

@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #F3C558;
+  }
+
+  #section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+    color: #0E0E0E;
+  }
+
+  #titulo-home {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  #subtitle-home {
+    font-size: 1.5rem;
+  }
+  
+  .container-section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3C558;
+    background-image: url(./midias/background-hero.png);
+    height: 75vh;
+  }
+ 
+  #button-home {
+    margin-top: 5em;
+    padding: 15px 40px;
+    background: #0E0E0E;
+    border-radius: 9px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #FBFBFB;
+  }
+
+  #container-section-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+    /* background-color: aqua; */
+  }
+
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blueviolet; */
+    color: white;
+    width: 45%;
+  }
+
+  #titulo-section-2 {
+    margin-bottom: 3%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    align-self: center;
+  }
+
+  #subtitle-section-2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 4vh;
+    /* width: 71.3vw; */
+  }
+
+  main {
+    height: 230vh;
+    background-color: #0E0E0E;
+  }
+
+  .depositions {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .depositions > h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 8.4vh;
+    color: #FBFBFB;
+  }
+
+  .grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 1vw;
+  }
+
+  .container-cards {
+    /* background-color: palevioletred; */
+    margin: 2em;
+    height: 47vh;
+    width: 80%;
+  }
+
+  .card {
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    line-height: 3vh;
+    color: #0E0E0E;
+    /* height: 50vh; */
+    /* width: 95%; */
+  }
+  
+  .img-card {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .text-card {
+    text-align: left;
+    margin: 1em 1.5em;
+  }

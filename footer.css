@@ -7,8 +7,6 @@
     background-color: #F6C34A;
     margin-left: 10vw;
     margin-right: 10vw;
-    /* width: 100vw; */
-    /* height: 60vh; */
   }
 
   .logo-footer {
@@ -18,7 +16,7 @@
 
   .container-footer {
     display: flex;
-    column-gap: 9.83vw;
+    justify-content: space-between;
     margin-top: 7.42vh;
   }
 
@@ -29,31 +27,31 @@
   .itens-footer h4 {
     margin-bottom: 3.78vh;
     font-family: 'Poppins';
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
     color: #0E0E0E;
   }
 
   .itens-footer p {
     font-family: 'Open Sans';
     font-size: .8rem;
-    line-height: 3.36vh;
+    line-height: 5vh;
     color: #0E0E0E;
-  }
-
-  .itens-footer a {
-    margin-right: 1vw;
   }
 
   .map-footer {
     border: 2px solid black;
   }
 
+  footer iframe {
+    width: 25vw;
+    height: 35vh;
+  }
+
   .item-list {
     list-style-type: none;
-    margin-bottom: 1.68vh;
+    margin-bottom: 1.5vh;
     font-family: 'Open Sans';
-    font-size: 1rem;
-    line-height: 2.6vh;
+    font-size: .9rem;
     color: #0E0E0E;
   }

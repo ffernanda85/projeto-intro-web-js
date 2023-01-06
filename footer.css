@@ -5,8 +5,7 @@
 
   footer {
     background-color: #F6C34A;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    padding: 0 10vw;
   }
 
   .logo-footer {

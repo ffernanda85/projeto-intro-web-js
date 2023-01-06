@@ -1,0 +1,106 @@
+body {
+    height: 170vh;
+}
+
+main {
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #F6C34A;
+    justify-content: space-between;
+}
+
+.container-side {
+    background-color: #0E0E0E;
+    width: 15%;
+    padding-top: 4em;
+    padding-left: 6em;
+}
+
+.list-side {
+    list-style-type: none;            
+}
+
+.list-side li {
+    margin-bottom: 2.6em;
+}
+
+.item-aside {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 4.2vh;
+    color: #FFFFFF;
+}
+
+/*  #img-wpp {
+    position: fixed;
+    right: 4vw;
+    bottom: 4vh;
+    width: 3.9vw;
+} */
+
+.container-cards-classes {
+    /* background-color: lightcoral; */
+    margin-right: 8.5em;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 6em
+}
+
+#txtSearch {
+    float: left;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    width: 20vw;
+    height: 5vh;
+    border: none;
+}
+
+#btnSearch {
+    background-color: #0E0E0E;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 0px 4px 4px 0px;
+    line-height: 30px;
+    float: left;
+    width: 7.8vw;
+    height: 5vh;
+}
+
+.containerCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+}
+
+.divCards {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 1em;
+}
+
+.divCards h4 {
+    margin-bottom: .8125em;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 4.2vh;
+    color: #000000;
+    text-align: center;
+}
+
+.divCards p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    line-height: 3.1vh;
+    color: #000000;
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -16,14 +16,13 @@
 
     <link href="./header.css" rel="stylesheet">
     <link href="./footer.css" rel="stylesheet">
-    <link href="./adm.css" rel="stylesheet">
+    <link href="./matriculas.css" rel="stylesheet">
 
-    <title>Área ADM</title>
-
+    <title>Matriculas</title>
+  
 </head>
 
 <body>
-
     <header class="container-header">
 
         <a href="./index.html" class="logo-archor">
@@ -40,7 +39,7 @@
         </nav>
 
     </header>
-    
+
     <main>
         <aside class="container-side">
             <ul class="list-side">
@@ -49,91 +48,47 @@
                 <li><a class="item-aside" href="">Financeiro Alunos</a></li>
             </ul>
         </aside>
-        <div class="container-cards-classes">
-            <div id="divSearch">
-                <input type="text" id="txtSearch" placeholder="      Digite o número da turma">
-                <button id="btnSearch">Buscar</button>
-            </div>
-            <div class="containerCards">
-                <div class="divCards">
-                    <h4>Hipátia</h4>
-                    <p><b>Curso:</b>Javascript</p>
-                    <p><b>Início:</b>30/11/2022</p>
-                    <p><b>Término:</b>30/01/2023</p>
-                    <p><b>Número de Alunos:</b>150</p>
-                    <p><b>Período:</b>Noturno</p>
-                    <p><b>Concluído:</b>Não</p>
+        <div class="matriculate">
+
+            <form action="#">
+                <h4>Matriculas</h4>
+
+                <ul class="list-ul">
+                    <li class="item-label"><label for="name">Nome</label></li>
+                    <li class="item-input"><input type="text" id="name" name="name"></li>
+
+                    <li class="item-label"><label for="course">Curso</label></li>
+                    <li class="item-input"><input type="text" id="course" name="course"></li>
+
+                    <li class="item-label"><label for="class">Turma</label></li>
+                    <li class="item-input"><input type="text" id="class" name="class"></li>
+
+                    <li class="item-label"><label for="nParcel">Número de Parcelas</label></li>
+                    <li class="item-input"><input type="text" id="nParcel" name="nParcel"></li>
+
+                    <button type="submit">Matricular aluno</button>
+                </ul>
+            </form>
+        </div>
+        <div class="matriculate">
+
+            <div class="list-report">
+                
+                <div>
+                    <h4>Aluno Matriculado</h4>
+                    <img src="./midias/Vector-5.png" alt="img">
                 </div>
-                <div class="divCards">
-                    <h4>Hipátia</h4>
-                    <p><b>Curso:</b>Javascript</p>
-                    <p><b>Início:</b>30/11/2022</p>
-                    <p><b>Término:</b>30/01/2023</p>
-                    <p><b>Número de Alunos:</b>150</p>
-                    <p><b>Período:</b>Noturno</p>
-                    <p><b>Concluído:</b>Não</p>
-                </div>
-                <div class="divCards">
-                    <h4>Hipátia</h4>
-                    <p><b>Curso:</b>Javascript</p>
-                    <p><b>Início:</b>30/11/2022</p>
-                    <p><b>Término:</b>30/01/2023</p>
-                    <p><b>Número de Alunos:</b>150</p>
-                    <p><b>Período:</b>Noturno</p>
-                    <p><b>Concluído:</b>Não</p>
-                </div>
-                <div class="divCards">
-                    <h4>Hipátia</h4>
-                    <p><b>Curso:</b>Javascript</p>
-                    <p><b>Início:</b>30/11/2022</p>
-                    <p><b>Término:</b>30/01/2023</p>
-                    <p><b>Número de Alunos:</b>150</p>
-                    <p><b>Período:</b>Noturno</p>
-                    <p><b>Concluído:</b>Não</p>
-                </div>
-                <div class="divCards">
-                    <h4>Hipátia</h4>
-                    <p><b>Curso:</b>Javascript</p>
-                    <p><b>Início:</b>30/11/2022</p>
-                    <p><b>Término:</b>30/01/2023</p>
-                    <p><b>Número de Alunos:</b>150</p>
-                    <p><b>Período:</b>Noturno</p>
-                    <p><b>Concluído:</b>Não</p>
-                </div>
-                <div class="divCards">
-                    <h4>Hipátia</h4>
-                    <p><b>Curso:</b>Javascript</p>
-                    <p><b>Início:</b>30/11/2022</p>
-                    <p><b>Término:</b>30/01/2023</p>
-                    <p><b>Número de Alunos:</b>150</p>
-                    <p><b>Período:</b>Noturno</p>
-                    <p><b>Concluído:</b>Não</p>
-                </div>
-                <div class="divCards">
-                    <h4>Hipátia</h4>
-                    <p><b>Curso:</b>Javascript</p>
-                    <p><b>Início:</b>30/11/2022</p>
-                    <p><b>Término:</b>30/01/2023</p>
-                    <p><b>Número de Alunos:</b>150</p>
-                    <p><b>Período:</b>Noturno</p>
-                    <p><b>Concluído:</b>Não</p>
-                </div>
-                <div class="divCards">
-                    <h4>Hipátia</h4>
-                    <p><b>Curso:</b>Javascript</p>
-                    <p><b>Início:</b>30/11/2022</p>
-                    <p><b>Término:</b>30/01/2023</p>
-                    <p><b>Número de Alunos:</b>150</p>
-                    <p><b>Período:</b>Noturno</p>
-                    <p><b>Concluído:</b>Não</p>
-                </div>
+                
+                <ul class="ul-report">
+                    <li class="item-list-report">Aluno Matriculado</li>
+                    <li class="item-list-report">Nome: Calvin Klein</li>
+                    <li class="item-list-report">Curso: Javascript</li>
+                    <li class="item-list-report">Turma: Clarke</li>
+                </ul>
             </div>
         </div>
     </main>
 
-   <!--  <a href="https://web.whatsapp.com/" target="_blank">
-        <img id="img-wpp" src="./midias/logos_whatsapp-icon.png">
-    </a> -->
     <footer>
         <img class="logo-footer" src="./midias/logo.png">
         <div class="container-footer">
@@ -174,7 +129,6 @@
         </div>
 
     </footer>
-
 </body>
 
 </html>

@@ -3,12 +3,13 @@ main {
     background-color: #F6C34A;
     border-bottom: 2px solid black;
     display: grid;
-    grid-template: auto / 20% 1fr 1fr;
+    grid-template: auto / 18% 1fr 1fr;
 }
 
 .container-side {
     background-color: #0E0E0E;
-    padding-left: 6em;
+    padding-left: 4em;
+    
 }
 
 .matriculate, .container-side {
@@ -56,14 +57,18 @@ main {
 .matriculate>form>ul>button {
     background: #0E0E0E;
     border-radius: 9px;
+    width: 21.48vw;
+    height: 6.95vh;
+    margin-top: 2.69em;
+}
+
+.matriculate>form>ul>button>a {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: .8rem;
     line-height: 1.5em;
     color: #FBFBFB;
-    width: 21.48vw;
-    height: 6.95vh;
-    margin-top: 2.69em;
+    cursor: pointer;
 }
 
 .list-report > div {

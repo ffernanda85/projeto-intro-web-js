@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,10 +18,56 @@
 
     <link href="./header.css" rel="stylesheet">
     <link href="./footer.css" rel="stylesheet">
-    <link href="./matriculas.css" rel="stylesheet">
+   
 
-    <title>Matriculas</title>
-  
+    <title>Financeiro</title>
+
+    <style>
+        
+        body {
+            height: 150vh;
+            width: 100vw;
+        }
+
+        main {
+            display: flex;
+            align-items: baseline;
+            height: 85vh;
+            width: 100%;
+            border-bottom: 2px solid black;
+            background-color: #F6C34A;
+        }
+
+        .menu-aside {
+            flex-grow: .4;
+            height: 100%;
+            background-color: #0E0E0E;
+        }
+
+        .menu-aside-ul {
+            display: flex;
+            flex-direction: column;
+            gap: 3em;
+            align-items: flex-start;
+            padding: 4em 0 0 6em;
+        }
+
+        .menu-aside-li {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+            color: #FFFFFF;
+        }
+
+        .matriculate {
+            flex-grow: 2;
+        }
+
+    </style>
+
+      
 </head>
 
 <body>
@@ -41,31 +89,25 @@
       </header>
 
     <main>
-        <aside class="container-side">
-            <ul class="list-side">
-                <li><a class="item-aside" href="./adm.html">Turmas</a></li>
-                <li><a class="item-aside" href="./matriculas.html">Matriculas</a></li>
-                <li><a class="item-aside" href="">Financeiro Alunos</a></li>
+        <aside class="menu-aside">
+            <ul class="menu-aside-ul">
+                <li><a class="menu-aside-li" href="./adm.html">Turmas</a></li>
+                <li><a class="menu-aside-li" href="./matriculas.html">Matriculas</a></li>
+                <li><a class="menu-aside-li" href="./finaceiro.html">Financeiro Alunos</a></li>
             </ul>
         </aside>
-
         <div class="matriculate">
-            <form action="#">
-                <h4>Matriculas</h4>
-                <ul class="list-ul">
-                    <li class="item-label"><label for="name">Nome</label></li>
-                    <li class="item-input"><input type="text" id="name" name="name"></li>
+            <form action="#" class="form">
+                <h4>Financeiro</h4>
 
-                    <li class="item-label"><label for="course">Curso</label></li>
-                    <li class="item-input"><input type="text" id="course" name="course"></li>
+                <ul class="form-ul">
+                    <li class="form-item-label"><label for="course">Curso</label></li>
+                    <li class="form-item-input"><input type="text" id="course" name="course"></li>
 
-                    <li class="item-label"><label for="class">Turma</label></li>
-                    <li class="item-input"><input type="text" id="class" name="class"></li>
+                    <li class="form-item-label"><label for="nParcel">Número de Parcelas</label></li>
+                    <li class="form-item-input"><input type="text" id="nParcel" name="nParcel"></li>
 
-                    <li class="item-label"><label for="nParcel">Número de Parcelas</label></li>
-                    <li class="item-input"><input type="text" id="nParcel" name="nParcel"></li>
-
-                    <button type="submit"><a href="">Matricular aluno</a></button>
+                    <button type="submit"><a href="">Ver valor</a></button>
                 </ul>
             </form>
         </div>
@@ -132,6 +174,7 @@
         </div>
     
       </footer>
+
 </body>
 
 </html>

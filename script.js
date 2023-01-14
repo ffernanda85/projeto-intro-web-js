@@ -141,7 +141,7 @@ const carrinhoCursos = [];
 //criando a função buscarCurso
 
 const buscarCurso = (nomeCurso) => {
-    const resultCurso = cursos.find( item => item.nomeCurso.toLowerCase() === nomeCurso.toLowerCase())
+    const resultCurso = cursos.find((item) => item.nomeCurso.toLowerCase() === nomeCurso.toLowerCase())
     return resultCurso
 }
 /*  
@@ -340,11 +340,11 @@ const relatorioEstudante = (nomeEstudante) => {
 
 }
 
-console.log(relatorioEstudante("haL"))
+/* console.log(relatorioEstudante("haL"))
 console.log(relatorioEstudante("hals"))
 console.log(relatorioEstudante("cHR"))
 console.log(relatorioEstudante("LA"))
-console.log(relatorioEstudante("FLÁ"))
+console.log(relatorioEstudante("FLÁ")) */
 
 
 //============================================================================================

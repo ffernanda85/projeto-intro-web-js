@@ -57,9 +57,3 @@ main {
     transform: scale(1.1);
 }
 
-#img-wpp {
-    position: fixed;
-    right: 4vw;
-    bottom: 4vh;
-    width: 3.9vw;
-}

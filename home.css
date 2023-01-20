@@ -113,17 +113,6 @@
     padding: 1em 1.5em;
   }
 
-  #img-wpp {
-    position: fixed;
-    right: 1.85em;
-    bottom: 1.25em;
-    width: 3.9vw;
-  }
-
-  #img-wpp:hover {
-    transform: scale(1.2);
-  }
-
   .grid {
     display: grid;
     grid-auto-flow: column;

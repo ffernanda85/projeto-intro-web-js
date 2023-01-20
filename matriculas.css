@@ -9,7 +9,7 @@ main {
 }
 
 #aside-container {
-    flex-grow: .5;
+    flex-grow: .7;
     background-color: #0E0E0E;
 }
 
@@ -17,14 +17,21 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: flex-start;
+    padding-left: 2rem;
     height: 60%;
-    padding-left: 4rem;
+    width: 100%;
 }
 
 .aside-a {
     font-size: 1rem;
-    line-height: 4.2vh;
+    line-height: 1.875rem;
     color: #FFFFFF;
+}
+
+.aside-a:hover {
+    text-decoration-line: underline;
+    color: rgba(186, 181, 181, 0.217);
 }
 
 .matriculate-container {

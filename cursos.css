@@ -1,7 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body {
     background-color: #F6C34A;
@@ -15,13 +11,6 @@ main {
 .grid {
     display: grid;
     grid-auto-flow: column;
-}
-
-#img-wpp {
-    position: fixed;
-    right: 3vw;
-    bottom: 4vh;
-    width: 3.9vw;
 }
 
 .container-section-1 {

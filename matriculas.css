@@ -2,67 +2,65 @@ main {
     height: 85vh;
     background-color: #F6C34A;
     border-bottom: 2px solid black;
-    display: grid;
-    grid-template: auto / 18% 1fr 1fr;
-}
-
-.container-side {
-    background-color: #0E0E0E;
-    padding-left: 4em;
-    
-}
-
-.matriculate, .container-side {
-    padding-top: 4em;
-}
-
-.list-side li {
-    margin-bottom: 2.6em;
-}
-
-.item-aside {
+    display: flex;
     font-family: 'Poppins';
     font-weight: 700;
+    color: #000000;
+}
+
+#aside-container {
+    flex-grow: .5;
+    background-color: #0E0E0E;
+}
+
+#aside-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    padding-left: 4rem;
+}
+
+.aside-a {
     font-size: 1rem;
     line-height: 4.2vh;
     color: #FFFFFF;
 }
 
-.matriculate {
-    font-family: 'Poppins';
-    font-weight: 700;
-    color: #000000;
+.matriculate-container {
+    height: 100%;
+    flex-grow: 4;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.matriculate-form {
+    height:90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 1.625rem;
 }
 
-.matriculate h4 {
+.matriculate-title {
     font-size: 1.5em;
-    line-height: 2.25em;
 }
 
-.item-input>input {
+#name, #course, #class, #nParcel {
     width: 21.48vw;
     height: 5.04vh;
     background: #FBFBFB;
     border-radius: 4px;
     border: none;
+    margin-bottom: .3rem;
 }
 
-.item-input, .item-label, .list-side {
-    list-style-type: none;
-}
-
-.matriculate>form>ul>button {
+#matriculate-btn {
     background: #0E0E0E;
     border-radius: 9px;
     width: 21.48vw;
     height: 6.95vh;
-    margin-top: 2.69em;
-}
-
-.matriculate>form>ul>button>a {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: .8rem;
@@ -71,24 +69,28 @@ main {
     cursor: pointer;
 }
 
-.list-report > div {
+.report {
+    height: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.625rem;
+}
+
+#report-div-title {
     display: flex;
     column-gap: 1.8125em;
     align-items: center;
 }
 
-.list-report img {
+#report-div-img {
     width: 2.86vw;
     height: 6.16vh;
 }
 
-.item-list-report {
+.report-li {
     list-style-type: none;
     font-family: 'Open Sans';
     font-weight: 400;
     line-height: 1.375em;
-}
-
-.ul-report, .list-ul {
-    padding-top: 1.625em;
 }

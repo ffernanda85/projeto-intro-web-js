@@ -27,12 +27,17 @@ main {
 
 #contact-form {
     font-size: .8rem;
-    line-height: 4vh;
+    line-height: 1.5rem;
 }
 
 #name, #email {
     width: 16.8vw;
     height: 4vh;
+}
+
+#message {
+    width: 16.8vw;
+    height: 18vh;
 }
 
 #name, #email, #message {

@@ -42,21 +42,26 @@ main {
     justify-content: space-evenly;
 }
 
-.matriculate-form {
-    height:90%;
+.matriculate-form, .report {
+    height:100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 1.625rem;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-top: 3.813rem;
 }
 
 .matriculate-title {
-    font-size: 1.5em;
+    font-size: 1.25em;
+}
+
+.matriculate-label {
+    font-size: .85rem;
 }
 
 #name, #course, #class, #nParcel {
     width: 21.48vw;
-    height: 5.04vh;
+    height: 4.5vh;
     background: #FBFBFB;
     border-radius: 4px;
     border: none;
@@ -67,7 +72,7 @@ main {
     background: #0E0E0E;
     border-radius: 9px;
     width: 21.48vw;
-    height: 6.95vh;
+    height: 6vh;
     font-family: 'Poppins';
     font-weight: 700;
     font-size: .8rem;
@@ -76,17 +81,15 @@ main {
     cursor: pointer;
 }
 
-.report {
-    height: 48%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.625rem;
+#matriculate-btn:hover {
+    transform: scale(1.1);
+    text-decoration-line: underline;
+    color: rgba(186, 181, 181, 0.217);
 }
 
 #report-div-title {
     display: flex;
-    column-gap: 1.8125em;
+    column-gap: 1.5em;
     align-items: center;
 }
 
@@ -100,4 +103,5 @@ main {
     font-family: 'Open Sans';
     font-weight: 400;
     line-height: 1.375em;
+    font-size: .85rem;
 }

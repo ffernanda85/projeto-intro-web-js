@@ -76,6 +76,7 @@ main {
 
   #financial-add-course:hover {
     text-decoration-line: underline;
+    cursor: pointer;
   }
 
   .financial-btn {
@@ -89,6 +90,13 @@ main {
     color: #FBFBFB;
     width: 20vw;
     height: 6vh;
+  }
+
+  .financial-btn:hover {
+    transform: scale(1.1);
+    text-decoration-line: underline;
+    color: rgba(186, 181, 181, 0.217);
+    
   }
 
   .financial-text {

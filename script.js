@@ -226,14 +226,78 @@ const parcelarCurso = (nParcelas, carrinhoCursos) => {
 //=======================================================================
 //criar função buscarTurma
 
-const buscarTurma = (selecionarTurma) => {
+
+const buscarTurma = () => {
+    let inputTurma = document.getElementById("search-input")
+    
+    const resultTurma = turmas.filter((item) => {
+        return item.nomeTurma.toLowerCase().startsWith(inputTurma.value.toLowerCase()) 
+    })
+
+    inputTurma.value = ""
+
+    return resultTurma.length > 0 ? gerarCard(resultTurma) : gerarCard(turmas)
+}
+
+
+//criar função gerarCard
+
+const gerarCard = (turmasBuscadas) => {
+    const templateTurmas = turmasBuscadas.map((cadaTurmaBuscada) => 
+            `
+            <div class="card-team">
+                <h4 class="card-team-h4">${cadaTurmaBuscada.nomeTurma}</h4>
+                <ul>
+                    <li class="card-team-li"><b>Curso:</b> ${cadaTurmaBuscada.curso}</li>
+                    <li class="card-team-li"><b>Início:</b> ${cadaTurmaBuscada.inicio}</li>
+                    <li class="card-team-li"><b>Término:</b> ${cadaTurmaBuscada.termino}</li>
+                    <li class="card-team-li"><b>Número de Alunos:</b> ${cadaTurmaBuscada.numeroDeAlunos}</li>
+                    <li class="card-team-li"><b>Período:</b> ${cadaTurmaBuscada.periodo}</li>
+                    <li class="card-team-li"><b>Concluído:</b> ${cadaTurmaBuscada.concluida ? "Sim" : "Não"}</li>
+                </ul>
+            </div>
+            `    
+    )
+    
+    let addCards = document.getElementById("container-cards-team")        
+    addCards.innerHTML = templateTurmas.join("");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const buscarTurma = (selecionarTurma) => {
     
     const resultTurma = turmas.filter((item) => {
        return item.nomeTurma.toLowerCase() === selecionarTurma.toLowerCase()
     })
     
     resultTurma.length > 0 ? console.log(resultTurma[0]) : console.log("Turma não encontrada!")    
-}
+} */
 //buscarTurma("BURNEL")
 //buscarTurma("BURNEL")
 //buscarTurma("Clard")

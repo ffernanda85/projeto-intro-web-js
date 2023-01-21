@@ -50,6 +50,8 @@
 
   #section-1-button:hover {
     transform: scale(1.1);
+    text-decoration-line: underline;
+    color: rgba(186, 181, 181, 0.217);
   }
 
   .container-section-2 {

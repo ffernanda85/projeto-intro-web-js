@@ -69,10 +69,12 @@ main {
 }
 
 #container-cards-team {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     column-gap: 1.2rem;
     row-gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 55vw;
 }
 
 .card-team {

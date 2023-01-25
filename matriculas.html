@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+  <script src="./script-update.js" defer></script>
+
   <link href="./header.css" rel="stylesheet">
   <link href="./footer.css" rel="stylesheet">
   <link href="./matriculas.css" rel="stylesheet">
@@ -56,20 +58,20 @@
           <li><label class="matriculate-label" for="name">Nome</label></li>
           <li class="item-input"><input type="text" id="name" name="name"></li>
 
-          <li><label class="matriculate-label" for="course">Curso</label></li>
-          <li><input type="text" id="course" name="course"></li>
+          <li><label class="matriculate-label" for="course-matriculate">Curso</label></li>
+          <li><input type="text" id="course-matriculate" name="course"></li>
 
-          <li><label class="matriculate-label" for="class">Turma</label></li>
-          <li><input type="text" id="class" name="class"></li>
+          <li><label class="matriculate-label" for="class-matriculate">Turma</label></li>
+          <li><input type="text" id="class-matriculate" name="class"></li>
 
-          <li><label class="matriculate-label" for="nParcel">Número de Parcelas</label></li>
-          <li><input type="text" id="nParcel" name="nParcel"></li>
+          <li><label class="matriculate-label" for="nParcel-matriculate">Número de Parcelas</label></li>
+          <li><input type="text" id="nParcel-matriculate" name="nParcel"></li>
         </ul>
-        <button id="matriculate-btn" type="submit">Matricular aluno</button>
+        <button id="matriculate-btn" onclick="matricular()" >Matricular aluno</button>
       </form>
 
-      <div class="report">
-        <div id="report-div-title">
+      <div class="report" id="report">
+        <!-- <div id="report-div-title">
           <h4 class="matriculate-title">Aluno Matriculado</h4>
           <img id="report-div-img" src="./midias/Vector-5.png" alt="img">
         </div>
@@ -79,7 +81,7 @@
           <li class="report-li">Nome: Calvin Klein</li>
           <li class="report-li">Curso: Javascript</li>
           <li class="report-li">Turma: Clarke</li>
-        </ul>
+        </ul> -->
       </div>
 
     </div>

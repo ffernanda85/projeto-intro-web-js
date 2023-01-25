@@ -4,19 +4,19 @@
 const cursos = [
     {
         nomeCurso: "HTML e CSS",
-        descricao: "",
+        descricao: "Aprendar tudo sobre a linguagem de marcação HTML e nossa famosa linguagem de estilização CSS",
         duracao: "1 mês",
         valor: 500.00
     },
     {
         nomeCurso: "JavaScript",
-        descricao: "",
+        descricao: "Aprenda tudo sobre o famosinho JavaScript",
         duracao: "2 meses",
         valor: 900.00
     },
     {
         nomeCurso: "APIsRest",
-        descricao: "",
+        descricao: "Aprenda tudo sobre APIsRest",
         duracao: "6 meses",
         valor: 2000.00
     }
@@ -140,11 +140,43 @@ const carrinhoCursos = [];
 //=======================================================================
 //criando a função buscarCurso
 
-const buscarCurso = (nomeCurso) => {
+
+//
+const buscarCurso = () => {
+    
+    let inputCurso = document.getElementById("course") 
+    inputCurso = inputCurso.value.trim()
+    console.log(inputCurso)
+
+    
+    const resultCurso = cursos.filter((curso) => 
+        curso.nomeCurso.toLowerCase().includes(inputCurso.toLowerCase())
+    )
+    console.log(resultCurso)
+    inputCurso.value = ""
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const buscarCurso = (nomeCurso) => {
     const resultCurso = cursos.find((item) => item.nomeCurso.toLowerCase() === nomeCurso.toLowerCase())
     return resultCurso
 }
-/*  
+ *//*  
 console.log(buscarCurso("JavaSCRIPT"))
 console.log(buscarCurso("HTmL e css"))
 console.log(buscarCurso("APIsRest"))
@@ -153,8 +185,13 @@ console.log(buscarCurso("JavaScriptq"))
 //=======================================================================
 //criando a função adicionarCarrinhoCursos para incrementar o carrinhoCursos com o valor dos cursos selecionados usando a função buscarCursos como callback
 
-const adicionarCarrinhoCursos = (nomeCurso) => {
-    const selecionarCurso = buscarCurso(nomeCurso)
+const adicionarCarrinhoCursos = () => {
+
+    let inputCurso = document.getElementById("course") 
+    inputCurso = inputCurso.value.trim()
+    if (!inputCurso) return
+
+    const selecionarCurso = buscarCurso(inputCurso)
 
     if (!selecionarCurso) {//não executa a próxima linha se o curso escrito for incompativel com os cadastrados
         return

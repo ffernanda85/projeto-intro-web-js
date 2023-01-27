@@ -59,15 +59,18 @@
           <li class="item-input"><input type="text" id="name" name="name"></li>
 
           <li><label class="matriculate-label" for="course-matriculate">Curso</label></li>
-          <li><input type="text" id="course-matriculate" name="course"></li>
+          <li><input onclick="listCourses(event)" type="text" id="course-matriculate" name="course" list="courses"></li>
 
           <li><label class="matriculate-label" for="class-matriculate">Turma</label></li>
-          <li><input type="text" id="class-matriculate" name="class"></li>
+          <li><input onclick="listClass(event)" type="text" id="class-matriculate" name="class" list="classes"></li>
 
           <li><label class="matriculate-label" for="nParcel-matriculate">Número de Parcelas</label></li>
-          <li><input type="text" id="nParcel-matriculate" name="nParcel"></li>
+          <li><input type="number" id="nParcel-matriculate" name="nParcel"></li>
         </ul>
-        <button id="matriculate-btn" onclick="matricular()" >Matricular aluno</button>
+        <button id="matriculate-btn" onclick="matricular(event)" >Matricular aluno</button>
+
+        <datalist id="courses"></datalist>
+        <datalist id="classes"></datalist>
       </form>
 
       <div class="report" id="report">
@@ -106,7 +109,7 @@
           <li class="footer-ul-item"><a href="./index.html">Home</a></li>
           <li class="footer-ul-item"><a href="./cursos.html">Cursos</a></li>
           <li class="footer-ul-item"><a href="https://www.labenu.com.br/" target="_blank">Blog</a></li>
-          <li class="footer-ul-item"><a href="">Fale Conosco</a></li>
+          <li class="footer-ul-item"><a href="./contato.html">Fale Conosco</a></li>
           <li class="footer-ul-item"><a href="">Termos e Condições</a></li>
           <li class="footer-ul-item"><a href="">Política de Privacidade</a></li>
           <li class="footer-ul-item"><a href="">FAQ</a></li>
@@ -116,23 +119,24 @@
       <div class="footer-list">
         <h4 class="footer-list-title">Redes Sociais</h4>
         <ul id="footer-ul-social">
-          <li><a href=""><img class="footer-ul-vectors" src="./midias/vector-1.png"></a></li>
-          <li><a href=""><img class="footer-ul-vectors" src="./midias/Vector-2.png"></a></li>
-          <li><a href=""><img class="footer-ul-vectors" src="./midias/Vector-3.png"></a></li>
-          <li><a href=""><img class="footer-ul-vectors" src="./midias/Vector-4.png"></a></li>
+          <li><a href="https://twitter.com/i/flow/login" target="_blank"><img class="footer-ul-vectors" src="./midias/vector-1.png"></a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-2.png"></a></li>
+          <li><a href="https://pt-br.facebook.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-3.png"></a></li>
+          <li><a href="https://www.instagram.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-4.png"></a></li>
         </ul>
       </div>
 
       <div class="footer-list">
         <h4 class="footer-list-title">Área Restrita</h4>
         <ul class="footer-ul-area">
-          <li class="footer-texts"><a href="">Área Administrativa</a></li>
-          <li class="footer-texts"><a href="">Espaço do Aluno</a></li>
+          <li class="footer-texts"><a href="./adm.html">Área Administrativa</a></li>
+          <li class="footer-texts"><a href="./finaceiro.html">Espaço do Aluno</a></li>
         </ul>
       </div>
     </div>
 
   </footer>
+
 </body>
 
 </html>

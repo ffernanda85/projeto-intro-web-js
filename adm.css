@@ -68,6 +68,7 @@ main {
     height: 5vh;
 }
 
+
 #container-cards-team {
     display: flex;
     column-gap: 1.2rem;

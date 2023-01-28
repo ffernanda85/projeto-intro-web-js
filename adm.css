@@ -27,11 +27,12 @@ main {
     font-size: 1rem;
     line-height: 1.875rem;
     color: #FFFFFF;
+    transition: all 0.4s ease;
 }
 
 .aside-a:hover {
     text-decoration-line: underline;
-    color: rgba(186, 181, 181, 0.217);
+    opacity: .5;
 }
 
 .container-search-team {
@@ -66,8 +67,13 @@ main {
     line-height: 1.875rem;
     width: 7.8vw;
     height: 5vh;
+    transition: all 0.4s ease;
 }
 
+#search-btn:hover {
+    transform: scale(1.05);
+    opacity: .7;
+}
 
 #container-cards-team {
     display: flex;

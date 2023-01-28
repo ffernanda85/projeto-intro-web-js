@@ -77,7 +77,7 @@ const buscarTurma = () => {
     let inputTurma = document.getElementById("search-input")
 
     const turmaEscolhida = turmas.filter((cadaTurma) =>
-        cadaTurma.nomeTurma.toLowerCase().startsWith(inputTurma.value.toLowerCase())
+        cadaTurma.nomeTurma.toLowerCase().includes(inputTurma.value.toLowerCase())
     )
     inputTurma.value = ""
     turmaEscolhida.length > 0 ? gerarCard(turmaEscolhida) : gerarCard(turmas);
@@ -143,8 +143,8 @@ const cursos = [
 const carrinhoCursos = [];
 
 const buscarCurso = (inputCurso) => {
-
     const result = cursos.find(el => el.nomeCurso.toLowerCase().includes(inputCurso))
+
     if (typeof result === "undefined") {
         document.getElementById("course").value = ""
         return alert('Atenção! Curso não encontrado!')
@@ -153,19 +153,24 @@ const buscarCurso = (inputCurso) => {
 }
 
 const adicionarCarrinhoCursos = () => {
-
     let inputCurso = document.getElementById("course")
     inputCurso = inputCurso.value.trim().toLowerCase()
 
     if (!inputCurso) {
-        return alert('Insira um curso!')
+        return swal({
+                        title: "Selecione um curso válido!",            
+                        icon: "error",
+                    });
     }
 
     const selecionarCurso = buscarCurso(inputCurso)
 
     if (carrinhoCursos.includes(selecionarCurso.valor)) {//garante que o curso já não tenha sido incluido no carrinho!
         document.getElementById("course").value = ""
-        return alert('Curso já inserido!')
+        return swal({
+                        title: "Curso já inserido!",            
+                        icon: "error",
+                    });
     }
 
     carrinhoCursos.push(selecionarCurso.valor)
@@ -179,11 +184,6 @@ const parcelarCurso = () => {
     let valorParcelas = 0;
     let nParcelas = +document.getElementById("nParcel").value;
 
-    if (nParcelas <= 0 || nParcelas > 10) {
-        document.getElementById("nParcel").value = ""
-        return alert('Insira apenas parcelas entre 1 e 10!')
-    }
-
     if (carrinhoCursos.length > 1) {
         switch (carrinhoCursos.length) {
             case 3:
@@ -195,7 +195,6 @@ const parcelarCurso = () => {
                 break;
         };
     };
-
     valorTotal = carrinhoCursos.reduce((acc, vAtual) => acc + vAtual, 0)
 
     if (nParcelas >= 1 && nParcelas <= 2) {
@@ -217,10 +216,7 @@ const parcelarCurso = () => {
 
         document.getElementById("resultado").innerHTML = `O valor do pagamento é de R$ ${valorTotal} com ${(desconto * 100).toFixed()}% de desconto, parcelado em ${nParcelas}x de R$ ${valorParcelas}`
     }
-
-    document.getElementById("nParcel").value = ""
 };
-
 
 const estudantes = [
     {
@@ -264,37 +260,33 @@ const buscarEstudante = (nomeEstudante) => {
     return estudanteFilter
 };
 
-
 const relStudent = (event) => {
-
     event.preventDefault()
-
     let alunoEscolhido = document.getElementById("rel-name").value.toLowerCase()
-    //console.log(alunoEscolhido)
 
     if (!alunoEscolhido) return
 
     const studentRecord = buscarEstudante(alunoEscolhido)
-    //console.log(studentRecord)
 
     if (typeof studentRecord === "string") {
         document.getElementById("rel-name").value = ""
-        return alert('Aluno Não Matriculado!')
+        return swal({
+                        title: "Estudante não matriculado!",            
+                        icon: "error",
+                    });
     }
-
     document.getElementById("report-ul").innerHTML =
-        `         <li class="financial-text">Aluno: ${studentRecord[0].nomeEstudante}</li>
+        ` <li class="financial-text">Aluno: ${studentRecord[0].nomeEstudante}</li>
           <li class="financial-text">Turma: ${studentRecord[0].turma}</li>
           <li class="financial-text">Curso: ${studentRecord[0].curso}</li>
           <li class="financial-text">Valor total: ${studentRecord[0].valor}</li>
           <li class="financial-text">Valor parcela: ${studentRecord[0].parcelas}</li>
           <li class="financial-text">Nº parcelas: ${studentRecord[0].nParcelas}</li>
-          `
+        `
     document.getElementById("rel-name").value = ""
 }
 
 const matricular = (event) => {
-
     event.preventDefault()
 
     let nome = document.getElementById("name").value.toLowerCase()
@@ -308,7 +300,10 @@ const matricular = (event) => {
         document.getElementById("class-matriculate").value = ""
         document.getElementById("nParcel-matriculate").value = ""
 
-        return alert("Insira dados válidos!")
+        return swal({
+                      title: "Preencha todos os dados!",            
+                      icon: "error",
+                    });
     }
 
     let objCurso = buscarCurso(curso)
@@ -365,9 +360,7 @@ const listCourses = (event) => {
             <option value= "${item.nomeCurso}">
         `
     )
-    console.log(itemDataList.join(''))
     newOptionFinancial.innerHTML = itemDataList.join("")
-    console.log(newOptionFinancial)
 }
 
 const listClass = (event) => {
@@ -381,4 +374,31 @@ const listClass = (event) => {
         `
     )
     newOptionListClass.innerHTML = itemDataListClass.join('')
+}
+
+const messageSend = (event) => {
+    event.preventDefault()
+    let name = document.getElementById("name")
+    let email = document.getElementById("email")
+    let message = document.getElementById("message")
+
+    if (!name.value || !email.value || !message.value) {
+        name.value = ""
+        email.value = ""
+        message.value = ""
+
+        return swal({
+                    title: "Preencha todos os dados!",            
+                    icon: "error",
+                  });
+    }
+    swal({
+        title: "Mensagem Recebida com Sucesso!",
+        text: "Em breve retornaremos o contato!",
+        icon: "success",
+      });
+    
+    name.value = ""
+    email.value = ""
+    message.value = ""
 }

@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <script src="./script-update.js" defer></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <link href="./header.css" rel="stylesheet">
   <link href="./footer.css" rel="stylesheet">
@@ -56,24 +57,24 @@
           <h4 class="financial-title">Financeiro</h4>
 
           <ul class="financial-ul">
-            <li class="financial-label"><label for="course">Curso</label></li>
+            <li class="financial-label"><label for="course">Curso</label> </li>
             <li class="financial-input"><input onclick="listCourses(event)" type="text" id="course" name="course" list="courses"></li>
             <li>
-              <p id="financial-add-course" onclick="adicionarCarrinhoCursos()">Adicionar outro Curso</p>
+              <p id="financial-add-course" onclick="adicionarCarrinhoCursos()">Adicionar Curso ao Carrinho</p>
             </li>
 
             <li class="financial-label"><label for="nParcel">Número de Parcelas</label></li>
-            <li class="financial-input"><input type="number" id="nParcel" name="nParcel"></li>
+            <li class="financial-input"><input type="number" min="1" max="12" value="1" id="nParcel" name="nParcel"></li>
           </ul>
 
           <button class="financial-btn" onclick="parcelarCurso()" type="button">Ver valor</button>
 
           <datalist id="courses"></datalist>
-          
+
         </form>
 
         <div id="div-rel-financial">
-          <span class="financial-title" id="curso-selecionado"></span>
+          <span class="rel-financial-title" id="curso-selecionado"></span>
           <span class="financial-text" id="resultado"></span>
           <!-- <h4 class="financial-title"><span></span></h4>
           <p class="financial-text">Desconto de 20%. Parcelas de 2x de R$1880.00</p> -->

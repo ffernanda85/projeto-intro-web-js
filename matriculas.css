@@ -27,11 +27,12 @@ main {
     font-size: 1rem;
     line-height: 1.875rem;
     color: #FFFFFF;
+    transition: all 0.4s ease;
 }
 
 .aside-a:hover {
     text-decoration-line: underline;
-    color: rgba(186, 181, 181, 0.217);
+    opacity: .5;
 }
 
 .matriculate-container {
@@ -66,6 +67,8 @@ main {
     border-radius: 4px;
     border: none;
     margin-bottom: .3rem;
+    text-align: center;
+    font-weight: 700;
 }
 
 #matriculate-btn {
@@ -79,12 +82,12 @@ main {
     line-height: 1.5em;
     color: #FBFBFB;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #matriculate-btn:hover {
     transform: scale(1.1);
-    text-decoration-line: underline;
-    color: rgba(186, 181, 181, 0.217);
+    opacity: .7;
 }
 
 #report-div-title {

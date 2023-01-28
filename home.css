@@ -1,122 +1,127 @@
+body {
+  background-color: #F3C558;
+}
 
-  body {
-    background-color: #F3C558;
-  }
+main {
+  width: 100%;
+  background-color: #0E0E0E;
+  font-family: 'Poppins';
+  color: #0E0E0E;
+}
 
-  main {
-    width: 100%;
-    background-color: #0E0E0E;
-    font-family: 'Poppins';
-    color: #0E0E0E;
-  }
+.main-container-section-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F3C558;
+  background-image: url(./midias/background-hero.png);
+  height: 85vh;
+  width: 100%;
+}
 
-  .main-container-section-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #F3C558;
-    background-image: url(./midias/background-hero.png);
-    height: 85vh;
-    width: 100%;
-  }
+#section-1-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  #section-1-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+#section-1-title {
+  font-weight: bold;
+  font-size: 3.75rem;
+}
 
-  #section-1-title {
-    font-weight: bold;
-    font-size: 3.75rem;
-  }
+#section-1-subtitle {
+  font-size: 2.125rem;
+}
 
-  #section-1-subtitle {
-    font-size: 2.125rem;
-  }
-  
-  #section-1-button {
-    height: 8.22vh;
-    width: 23.4375vw;
-    background: #0E0E0E;
-    border-radius: 9px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #FBFBFB;
-    text-align: center;
-    line-height: 3.668rem;
-  }
+#section-1-button {
+  height: 8.22vh;
+  width: 23.4375vw;
+  background: #0E0E0E;
+  border-radius: 9px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FBFBFB;
+  text-align: center;
+  line-height: 3.668rem;
+  transition: all 0.3s ease;
+}
 
-  #section-1-button:hover {
-    transform: scale(1.1);
-    text-decoration-line: underline;
-    color: rgba(186, 181, 181, 0.217);
-  }
+.fade:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+  text-decoration-line: none;
+}
 
-  .container-section-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 140vh;
-  }
+.container-section-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 140vh;
+}
 
-  #section-2-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 40vh;
-    width: 50%;
-    color: #FBFBFB;
-  }
+#section-2-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+  width: 50%;
+  color: #FBFBFB;
+}
 
-  .section-2-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.8rem;
-    align-self: center;
-    color: #FBFBFB;
-    line-height: 7rem;
-  }
+.section-2-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  align-self: center;
+  color: #FBFBFB;
+  line-height: 7rem;
+}
 
-  #section-2-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-  }
+#section-2-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+}
 
-  .section-2-depositions {
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-  }
+.section-2-depositions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .container-cards {
-    height: 47vh;
-    width: 80%;
-  }
+.container-cards {
+  height: 47vh;
+  width: 80%;
+}
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #FBFBFB;
-    border-radius: 10px;
-    text-align: center;
-    font-family: 'Open Sans';
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
- 
-  .card-text {
-    text-align: left;
-    padding: 1em 1.5em;
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FBFBFB;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transition: all 0.4s ease;
+}
 
-  .grid {
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 1.875rem;
-  }
+.card:hover {
+  opacity: 0.5;
+}
+
+.card-text {
+  text-align: left;
+  padding: 1em 1.5em;
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 1.875rem;
+}

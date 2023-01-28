@@ -27,11 +27,12 @@ main {
   font-size: 1rem;
   line-height: 1.875rem;
   color: #FFFFFF;
+  transition: all 0.4s ease;
 }
 
 .aside-a:hover {
   text-decoration-line: underline;
-  color: rgba(186, 181, 181, 0.217);
+  opacity: .5;
 }
 
 .financial-report-container {
@@ -42,7 +43,6 @@ main {
 }
 
 #financial-div {
-  /* background-color: aqua; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +63,7 @@ main {
   line-height: 2.25rem;
 }
 
-.financial-label {
+.financial-label, .rel-financial-title {
   font-size: .85rem;
   line-height: 1.5rem;
 }
@@ -76,6 +76,8 @@ main {
   background: #FBFBFB;
   border-radius: 4px;
   border: none;
+  text-align: center;
+  font-weight: 700;
 }
 
 #financial-add-course {
@@ -83,10 +85,12 @@ main {
   font-weight: 400;
   font-size: .875rem;
   line-height: 1.313rem;
+  transition: all 0.4s ease;
 }
 
 #financial-add-course:hover {
   text-decoration-line: underline;
+  opacity: .5;
   cursor: pointer;
 }
 
@@ -101,11 +105,13 @@ main {
   color: #FBFBFB;
   width: 20vw;
   height: 6vh;
+  transition: all 0.4s ease;
 }
 
 .financial-btn:hover {
+  opacity: .7;
   transform: scale(1.1);
-  color: rgba(186, 181, 181, 0.217);
+  cursor: pointer;
 }
 
 .financial-text {
@@ -127,6 +133,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  transition: all 0.4s ease;
 }
 
 .report-container {

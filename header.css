@@ -29,16 +29,19 @@
     width: 150%;
   }
 
+  .header-menu-item a {
+    transition: all 0.4s ease;
+  }
+
   .header-menu-item a:hover {
-    background-color: #ccc;
-    border-radius: 20px;
-    padding: .5em 1em;
+    color: rgb(65, 65, 216);
+    text-decoration-line: underline;
+    padding: 1em;
   }
 
   .header-menu-ul {
     display: flex;
     gap: 4em;
-    /* background-color: lightgoldenrodyellow; */
   }
 
   .header-menu-item {

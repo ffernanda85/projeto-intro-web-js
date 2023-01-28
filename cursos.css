@@ -35,6 +35,11 @@ main {
     border-radius: 12px;
     padding: 1em .5em;
     width: 20%;
+    transition: all 0.4s ease;
+}
+
+.item-section1:hover, .item-section-2:hover {
+    opacity: .7;
 }
 
 .item-section1 h4 {
@@ -63,12 +68,13 @@ main {
     font-weight: bold;
     font-size: 1rem;
     color: #FBFBFB;
+    transition: all 0.4s ease;
 }
 
 #button-cursos:hover {
     transform: scale(1.1);
-    text-decoration-line: underline;
-    color: rgba(186, 181, 181, 0.217);
+    text-decoration-line: none;
+    opacity: .7;
 }
 
 .container-section-2 {
@@ -90,6 +96,7 @@ main {
     column-gap: 4vw;
     padding: 2em 1em;
     width: 50%;
+    transition: all 0.4s ease;
 }
 
 .item-section-2 h4 {

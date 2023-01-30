@@ -16,11 +16,11 @@
     padding-top: 3.311rem;
   }
 
-  a {
+  .links-footer-efects {
     transition:all 0.3s ease;
   }
 
-  a:hover {
+  .links-footer-efects:hover {
     text-decoration: underline;
     opacity: .5;
   }

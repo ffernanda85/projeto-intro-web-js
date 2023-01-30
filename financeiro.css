@@ -24,15 +24,30 @@ main {
 }
 
 .aside-a {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.875rem;
   color: #FFFFFF;
-  transition: all 0.4s ease;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.aside-a::before {
+  content: " ";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: 0.4s ease-in-out;
+  background-color: darkturquoise;
+}
+
+.aside-a:hover::before {
+  width: 100%;
 }
 
 .aside-a:hover {
-  text-decoration-line: underline;
-  opacity: .5;
+  color: dimgrey;
 }
 
 .financial-report-container {

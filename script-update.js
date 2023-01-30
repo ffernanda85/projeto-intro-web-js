@@ -80,6 +80,7 @@ const buscarTurma = () => {
         cadaTurma.nomeTurma.toLowerCase().includes(inputTurma.value.toLowerCase())
     )
     inputTurma.value = ""
+
     turmaEscolhida.length > 0 ? gerarCard(turmaEscolhida) : gerarCard(turmas);
 }
 
@@ -125,21 +126,6 @@ const cursos = [
     }
 ];
 
-
-/* const buscarCurso = () => {
-    
-    let inputCurso = document.getElementById("course") 
-    inputCurso = inputCurso.value.trim()
-    console.log(inputCurso)
-
-    
-    const resultCurso = cursos.filter((curso) => 
-        curso.nomeCurso.toLowerCase().includes(inputCurso.toLowerCase())
-    )
-    console.log(resultCurso)
-    inputCurso.value = ""
-} */
-
 const carrinhoCursos = [];
 
 const buscarCurso = (inputCurso) => {
@@ -147,7 +133,10 @@ const buscarCurso = (inputCurso) => {
 
     if (typeof result === "undefined") {
         document.getElementById("course").value = ""
-        return alert('Atenção! Curso não encontrado!')
+        return swal({
+            title: "Atenção! Curso não encontrado!",
+            icon: "error",
+        });
 
     } else return result
 }
@@ -158,9 +147,9 @@ const adicionarCarrinhoCursos = () => {
 
     if (!inputCurso) {
         return swal({
-                        title: "Selecione um curso válido!",            
-                        icon: "error",
-                    });
+            title: "Selecione um curso válido!",
+            icon: "error",
+        });
     }
 
     const selecionarCurso = buscarCurso(inputCurso)
@@ -168,9 +157,9 @@ const adicionarCarrinhoCursos = () => {
     if (carrinhoCursos.includes(selecionarCurso.valor)) {//garante que o curso já não tenha sido incluido no carrinho!
         document.getElementById("course").value = ""
         return swal({
-                        title: "Curso já inserido!",            
-                        icon: "error",
-                    });
+            title: "Curso já inserido!",
+            icon: "error",
+        });
     }
 
     carrinhoCursos.push(selecionarCurso.valor)
@@ -271,9 +260,9 @@ const relStudent = (event) => {
     if (typeof studentRecord === "string") {
         document.getElementById("rel-name").value = ""
         return swal({
-                        title: "Estudante não matriculado!",            
-                        icon: "error",
-                    });
+            title: "Estudante não matriculado!",
+            icon: "error",
+        });
     }
     document.getElementById("report-ul").innerHTML =
         ` <li class="financial-text">Aluno: ${studentRecord[0].nomeEstudante}</li>
@@ -301,9 +290,9 @@ const matricular = (event) => {
         document.getElementById("nParcel-matriculate").value = ""
 
         return swal({
-                      title: "Preencha todos os dados!",            
-                      icon: "error",
-                    });
+            title: "Preencha todos os dados!",
+            icon: "error",
+        });
     }
 
     let objCurso = buscarCurso(curso)
@@ -367,7 +356,7 @@ const listClass = (event) => {
     event.preventDefault()
 
     let newOptionListClass = document.getElementById("classes")
-        
+
     let itemDataListClass = turmas.map((item) =>
         `
             <option value = "${item.nomeTurma}">
@@ -388,16 +377,16 @@ const messageSend = (event) => {
         message.value = ""
 
         return swal({
-                    title: "Preencha todos os dados!",            
-                    icon: "error",
-                  });
+            title: "Preencha todos os dados!",
+            icon: "error",
+        });
     }
     swal({
         title: "Mensagem Recebida com Sucesso!",
         text: "Em breve retornaremos o contato!",
         icon: "success",
-      });
-    
+    });
+
     name.value = ""
     email.value = ""
     message.value = ""

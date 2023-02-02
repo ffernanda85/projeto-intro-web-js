@@ -30,3 +30,4 @@ Recomendamos que caso não lembre como funciona o processo de entrega, clique [*
 
 Bom projeto para vocês!
 
+LINK DO DEPLOY DO PROJETO: https://ffernanda85.github.io/projeto-intro-web-js/

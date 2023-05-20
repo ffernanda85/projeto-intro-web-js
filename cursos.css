@@ -1,0 +1,124 @@
+
+body {
+    background-color: #F6C34A;
+}
+
+main {
+    /* background-color: aquamarine; */
+    height: 190vh;
+}
+
+.grid {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.container-section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightcoral;  */
+    column-gap: 3vw;
+}
+
+.section-1 {
+    /* background-color: aqua; */
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-section1 {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 1em .5em;
+    width: 20%;
+    transition: all 0.4s ease;
+}
+
+.item-section1:hover, .item-section-2:hover {
+    opacity: .7;
+}
+
+.item-section1 h4 {
+    margin-bottom: 5vh;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #000000;
+    text-align: center;
+}
+
+.item-section1 p {
+    margin: 1em 1em 1.8em 1em;
+    font-family: 'Open Sans';
+    font-size: .9rem;
+    line-height: 2.5vh;
+    color: #000000;
+}
+
+#button-cursos {
+    margin-top: 6em;
+    padding: 1em 5em;
+    background: #0E0E0E;
+    border-radius: 9px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1rem;
+    color: #FBFBFB;
+    transition: all 0.4s ease;
+}
+
+#button-cursos:hover {
+    transform: scale(1.1);
+    text-decoration-line: none;
+    opacity: .7;
+}
+
+.container-section-2 {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vh;
+    height: 55%;
+}
+
+.item-section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #FBFBFB;
+    column-gap: 4vw;
+    padding: 2em 1em;
+    width: 50%;
+    transition: all 0.4s ease;
+}
+
+.item-section-2 h4 {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.item-list-section-2 {
+    list-style-type: none;
+    font-family: 'Open Sans';
+    line-height: 22px;
+    color: #000000;
+}
+
+.title-modulo {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 4vh;
+    margin-bottom: 1vh;
+    color: #000000;
+}

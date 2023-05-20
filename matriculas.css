@@ -1,0 +1,125 @@
+main {
+    height: 85vh;
+    background-color: #F6C34A;
+    border-bottom: 2px solid black;
+    display: flex;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #000000;
+}
+
+#aside-container {
+    width: 19%;
+    background-color: #0E0E0E;
+}
+
+#aside-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-left: 2rem;
+    height: 60%;
+    width: 100%;
+}
+
+.aside-a {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: #FFFFFF;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.aside-a::before {
+    content: " ";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: 0.4s ease-in-out;
+    background-color: darkturquoise;
+}
+
+.aside-a:hover::before {
+    width: 100%;
+}
+
+.aside-a:hover {
+    color: dimgrey;
+}
+
+.matriculate-container {
+    height: 100%;
+    width: 81%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.matriculate-form, .report {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-top: 3.813rem;
+}
+
+.matriculate-title {
+    font-size: 1.25em;
+}
+
+.matriculate-label {
+    font-size: .85rem;
+}
+
+#name, #course-matriculate, #class-matriculate, #nParcel-matriculate {
+    width: 21.48vw;
+    height: 4.5vh;
+    background: #FBFBFB;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: .3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+#matriculate-btn {
+    background: #0E0E0E;
+    border-radius: 9px;
+    width: 21.48vw;
+    height: 6vh;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 1.5em;
+    color: #FBFBFB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#matriculate-btn:hover {
+    transform: scale(1.1);
+    opacity: .7;
+}
+
+#report-div-title {
+    display: flex;
+    column-gap: 1.5em;
+    align-items: center;
+}
+
+#report-div-img {
+    width: 2.86vw;
+    height: 6.16vh;
+}
+
+.report-li {
+    list-style-type: none;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    line-height: 1.375em;
+    font-size: .85rem;
+}

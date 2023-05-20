@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+  <script src="./script-update.js" defer></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <link href="./header.css" rel="stylesheet">
+  <link href="./footer.css" rel="stylesheet">
+  <link href="financeiro.css" rel="stylesheet">
+
+  <title>Financeiro</title>
+</head>
+
+<body>
+  <header class="header-container">
+
+    <a href="./index.html">
+      <img src="./midias/logo.png" alt="LabEscola-logo" class="header-logo">
+    </a>
+
+    <nav>
+      <ul class="header-menu-ul">
+        <li class="header-menu-item"><a data-menu-header="Home" href="./index.html">Home</a></li>
+        <li class="header-menu-item"><a data-menu-header="Cursos" href="./cursos.html">Cursos</a></li>
+        <li class="header-menu-item"><a data-menu-header="Contato" href="./contato.html">Contato</a></li>
+        <li class="header-menu-item"><a data-menu-header="ADM" href="./adm.html">ADM</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <aside id="aside-container">
+      <ul id="aside-ul">
+        <li class="aside-li"><a class="aside-a" href="./adm.html">Turmas</a></li>
+        <li class="aside-li"><a class="aside-a" href="./matriculas.html">Matriculas</a></li>
+        <li class="aside-li"><a class="aside-a" href="./finaceiro.html">Financeiro Alunos</a></li>
+      </ul>
+    </aside>
+
+    <div class="financial-report-container">
+      <div id="financial-div">
+        <form action="#" id="financial-form">
+          <h4 class="financial-title">Financeiro</h4>
+
+          <ul class="financial-ul">
+            <li class="financial-label"><label for="course">Curso</label> </li>
+            <li class="financial-input"><input onclick="listCourses(event)" type="text" id="course" name="course" list="courses"></li>
+            <li>
+              <p id="financial-add-course" onclick="adicionarCarrinhoCursos()">Adicionar Curso ao Carrinho</p>
+            </li>
+
+            <li class="financial-label"><label for="nParcel">Número de Parcelas</label></li>
+            <li class="financial-input"><input type="number" min="1" max="12" value="1" id="nParcel" name="nParcel"></li>
+          </ul>
+
+          <button class="financial-btn" onclick="parcelarCurso()" type="button">Ver valor</button>
+
+          <datalist id="courses"></datalist>
+
+        </form>
+
+        <div id="div-rel-financial">
+          <span class="rel-financial-title" id="curso-selecionado"></span>
+          <span class="financial-text" id="resultado"></span>
+          <!-- <h4 class="financial-title"><span></span></h4>
+          <p class="financial-text">Desconto de 20%. Parcelas de 2x de R$1880.00</p> -->
+        </div>
+      </div>
+
+      <div class="report-container">
+        <div id="report-form-btn">
+          <form action="#" id="report-form">
+            <h4 class="financial-title">Relatório Aluno</h4>
+
+            <ul id="report-form-ul">
+              <li><label class="financial-label" for="rel-name">Nome</label></li>
+              <li><input type="text" id="rel-name" name="name"></li>
+            </ul>
+          </form>
+
+          <button class="financial-btn" onclick="relStudent(event)">Buscar</button>
+        </div>
+
+        <ul class="report-ul" id="report-ul">
+          <!-- <li class="financial-text">Aluno:</li>
+          <li class="financial-text">Turma:</li>
+          <li class="financial-text">Curso:</li>
+          <li class="financial-text">Valor total:</li>
+          <li class="financial-text">Valor parcela:</li>
+          <li class="financial-text">Nº parcelas:</li> -->
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <img class="footer-logo" src="./midias/logo.png">
+
+    <div class="footer-container">
+      <div class="footer-list">
+        <h4 class="footer-list-title">Endereço</h4>
+        <div id="footer-map"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.996277295466!2d-46.70069088521957!3d-23.568577184679235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1672323119122!5m2!1spt-BR!2sbr"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <p class="footer-texts">R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Links</h4>
+        <ul class="footer-ul">
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./index.html">Home</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./cursos.html">Cursos</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="https://www.labenu.com.br/" target="_blank">Blog</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./contato.html">Fale Conosco</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">Termos e Condições</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">Política de Privacidade</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Redes Sociais</h4>
+        <ul id="footer-ul-social">
+          <li><a class="links-footer-efects" href="https://twitter.com/i/flow/login" target="_blank"><img class="footer-ul-vectors" src="./midias/vector-1.png"></a></li>
+          <li><a class="links-footer-efects" href="https://www.linkedin.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-2.png"></a></li>
+          <li><a class="links-footer-efects" href="https://pt-br.facebook.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-3.png"></a></li>
+          <li><a class="links-footer-efects" href="https://www.instagram.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-4.png"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Área Restrita</h4>
+        <ul class="footer-ul-area">
+          <li class="footer-texts"><a class="links-footer-efects" href="./adm.html">Área Administrativa</a></li>
+          <li class="footer-texts"><a class="links-footer-efects" href="./finaceiro.html">Espaço do Aluno</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

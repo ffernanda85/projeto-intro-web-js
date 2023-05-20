@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+  <script src="./script-update.js" defer></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <link href="./header.css" rel="stylesheet">
+  <link href="./footer.css" rel="stylesheet">
+  <link href="./matriculas.css" rel="stylesheet">
+
+  <title>Matriculas</title>
+
+</head>
+
+<body>
+  <header class="header-container">
+
+    <a href="./index.html">
+      <img src="./midias/logo.png" alt="LabEscola-logo" class="header-logo">
+    </a>
+
+    <nav>
+      <ul class="header-menu-ul">
+        <li class="header-menu-item"><a data-menu-header="Home" href="./index.html">Home</a></li>
+        <li class="header-menu-item"><a data-menu-header="Cursos" href="./cursos.html">Cursos</a></li>
+        <li class="header-menu-item"><a data-menu-header="Contato" href="./contato.html">Contato</a></li>
+        <li class="header-menu-item"><a data-menu-header="ADM" href="./adm.html">ADM</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <aside id="aside-container">
+      <ul id="aside-ul">
+        <li class="aside-li"><a class="aside-a" href="./adm.html">Turmas</a></li>
+        <li class="aside-li"><a class="aside-a" href="./matriculas.html">Matriculas</a></li>
+        <li class="aside-li"><a class="aside-a" href="./finaceiro.html">Financeiro Alunos</a></li>
+      </ul>
+    </aside>
+
+    <div class="matriculate-container">
+      <form class="matriculate-form" action="#">
+        <h4 class="matriculate-title">Matrículas</h4>
+        <ul class="matriculate-ul">
+          <li><label class="matriculate-label" for="name">Nome</label></li>
+          <li class="item-input"><input type="text" id="name" name="name"></li>
+
+          <li><label class="matriculate-label" for="course-matriculate">Curso</label></li>
+          <li><input onclick="listCourses(event)" type="text" id="course-matriculate" name="course" list="courses"></li>
+
+          <li><label class="matriculate-label" for="class-matriculate">Turma</label></li>
+          <li><input onclick="listClass(event)" type="text" id="class-matriculate" name="class" list="classes"></li>
+
+          <li><label class="matriculate-label" for="nParcel-matriculate">Número de Parcelas</label></li>
+          <li><input type="number" value="1" min="1" max="12" id="nParcel-matriculate" name="nParcel"></li>
+        </ul>
+        <button id="matriculate-btn" onclick="matricular(event)" >Matricular aluno</button>
+
+        <datalist id="courses"></datalist>
+        <datalist id="classes"></datalist>
+      </form>
+
+      <div class="report" id="report">
+        <!-- <div id="report-div-title">
+          <h4 class="matriculate-title">Aluno Matriculado</h4>
+          <img id="report-div-img" src="./midias/Vector-5.png" alt="img">
+        </div>
+
+        <ul id="report-ul">
+          <li class="report-li">Aluno Matriculado</li>
+          <li class="report-li">Nome: Calvin Klein</li>
+          <li class="report-li">Curso: Javascript</li>
+          <li class="report-li">Turma: Clarke</li>
+        </ul> -->
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <img class="footer-logo" src="./midias/logo.png">
+
+    <div class="footer-container">
+      <div class="footer-list">
+        <h4 class="footer-list-title">Endereço</h4>
+        <div id="footer-map"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.996277295466!2d-46.70069088521957!3d-23.568577184679235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1672323119122!5m2!1spt-BR!2sbr"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <p class="footer-texts">R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Links</h4>
+        <ul class="footer-ul">
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./index.html">Home</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./cursos.html">Cursos</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="https://www.labenu.com.br/" target="_blank">Blog</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./contato.html">Fale Conosco</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">Termos e Condições</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">Política de Privacidade</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Redes Sociais</h4>
+        <ul id="footer-ul-social">
+          <li><a class="links-footer-efects" href="https://twitter.com/i/flow/login" target="_blank"><img class="footer-ul-vectors" src="./midias/vector-1.png"></a></li>
+          <li><a class="links-footer-efects" href="https://www.linkedin.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-2.png"></a></li>
+          <li><a class="links-footer-efects" href="https://pt-br.facebook.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-3.png"></a></li>
+          <li><a class="links-footer-efects" href="https://www.instagram.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-4.png"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Área Restrita</h4>
+        <ul class="footer-ul-area">
+          <li class="footer-texts"><a class="links-footer-efects" href="./adm.html">Área Administrativa</a></li>
+          <li class="footer-texts"><a class="links-footer-efects" href="./finaceiro.html">Espaço do Aluno</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

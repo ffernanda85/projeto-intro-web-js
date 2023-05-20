@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="./script-update.js" defer></script>
+
+  <link href="./header.css" rel="stylesheet">
+  <link href="./footer.css" rel="stylesheet">
+  <link href="./contato.css" rel="stylesheet">
+
+  <title>Contato</title>
+
+</head>
+
+<body>
+
+  <header class="header-container">
+
+    <a href="./index.html">
+      <img src="./midias/logo.png" alt="LabEscola-logo" class="header-logo">
+    </a>
+
+    <nav>
+      <ul class="header-menu-ul">
+        <li class="header-menu-item"><a data-menu-header="Home" href="./index.html">Home</a></li>
+        <li class="header-menu-item"><a data-menu-header="Cursos" href="./cursos.html">Cursos</a></li>
+        <li class="header-menu-item"><a data-menu-header="Contato" href="./contato.html">Contato</a></li>
+        <li class="header-menu-item"><a data-menu-header="ADM" href="./adm.html">ADM</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="contact-container">
+      <h4 id="contact-title">Fale Conosco</h4>
+      <form id="contact-form" action="#">
+        <label for="name">Nome</label><br>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" placeholder="insira seu e-mail"><br>
+
+        <label for="message">Mensagem</label><br>
+        <input type="text" id="message" name="message"><br><br>
+
+        <button onclick="messageSend(event)" id="contact-btn" type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+  
+  <a href="https://web.whatsapp.com/" target="_blank">
+    <img id="img-wpp" src="./midias/logos_whatsapp-icon.png">
+  </a>
+
+  <footer>
+    <img class="footer-logo" src="./midias/logo.png">
+
+    <div class="footer-container">
+      <div class="footer-list">
+        <h4 class="footer-list-title">Endereço</h4>
+        <div id="footer-map"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.996277295466!2d-46.70069088521957!3d-23.568577184679235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57a7c7ace4c3%3A0x586759cab9b5c95a!2sR.%20Pais%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1672323119122!5m2!1spt-BR!2sbr"
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <p class="footer-texts">R. Pais Leme, 215. CEP 05424-150 - Pinheiros</p>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Links</h4>
+        <ul class="footer-ul">
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./index.html">Home</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./cursos.html">Cursos</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="https://www.labenu.com.br/" target="_blank">Blog</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="./contato.html">Fale Conosco</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">Termos e Condições</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">Política de Privacidade</a></li>
+          <li class="footer-ul-item"><a class="links-footer-efects" href="">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Redes Sociais</h4>
+        <ul id="footer-ul-social">
+          <li><a class="links-footer-efects" href="https://twitter.com/i/flow/login" target="_blank"><img class="footer-ul-vectors" src="./midias/vector-1.png"></a></li>
+          <li><a class="links-footer-efects" href="https://www.linkedin.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-2.png"></a></li>
+          <li><a class="links-footer-efects" href="https://pt-br.facebook.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-3.png"></a></li>
+          <li><a class="links-footer-efects" href="https://www.instagram.com/" target="_blank"><img class="footer-ul-vectors" src="./midias/Vector-4.png"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-list">
+        <h4 class="footer-list-title">Área Restrita</h4>
+        <ul class="footer-ul-area">
+          <li class="footer-texts"><a class="links-footer-efects" href="./adm.html">Área Administrativa</a></li>
+          <li class="footer-texts"><a class="links-footer-efects" href="./finaceiro.html">Espaço do Aluno</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

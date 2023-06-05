@@ -1,4 +1,4 @@
-# Projeto de Introdução Web - JavaScript
+# Projeto LabEscola
 
 ## Enunciado
 
